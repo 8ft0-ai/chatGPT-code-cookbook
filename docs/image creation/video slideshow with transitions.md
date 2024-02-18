@@ -17,12 +17,15 @@ Adding transitions requires a higher frames per second. This can result in the v
 
 # Result
 <video width="480" height="640" controls>
-  <source src="/image%20creation/assets/video_slideshow_with_transitions.mp4" type="video/mp4">
+  <source src="/chatGPT-code-cookbook/image%20creation/assets/video_slideshow_with_transitions.mp4" type="video/mp4">
 Your browser does not support the video tag.
 </video>
 
 
+---
 # Under the hood
+This is how ChatGPT handled the video slideshow creation
+
 
 ```python
 from moviepy.editor import ImageClip, concatenate_videoclips, vfx

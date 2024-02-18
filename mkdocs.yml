@@ -1,6 +1,8 @@
 site_name: ChatGPT Code Cookbook
 
+site_url: https://8ft0-ai.github.io/chatGPT-code-cookbook/
+repo_url: https://github.com/8ft0-ai/chatGPT-code-cookbook/
+
 theme:
   name: material
 
-use_directory_urls: false
