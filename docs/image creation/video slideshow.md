@@ -1,6 +1,6 @@
 # Create a Video Slideshow
 
-This builds on from [creating multiple images]('create%20many_%20images.md') 
+This builds on from [multiple images](multiple%20images.md)
 
 ## Prompt
 ```
@@ -48,19 +48,19 @@ Download the video ​
 
 ```
 # Result
-<video width="320" height="240" controls>
-  <source src="./assets/video_slideshow.mp4" type="video/mp4">
+<video width="480" height="640" controls>
+  <source src="/image%20creation/assets/video_slideshow.mp4" type="video/mp4">
 Your browser does not support the video tag.
 </video>
 
-Next Step: [Adding Transitions](./video%20slideshow%20with%20transitions.md)
+Next Step: [Adding Transitions](video%20slideshow%20with%20transitions.md)
 
 ---
 # Under the hood
 This is how ChatGPT handled the video slideshow creation
 
-```Python
-ffrom moviepy.editor import ImageClip, concatenate_videoclips
+```python
+from moviepy.editor import ImageClip, concatenate_videoclips
 
 # Define the paths to the images
 image_paths = [

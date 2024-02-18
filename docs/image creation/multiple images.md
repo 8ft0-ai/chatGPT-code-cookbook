@@ -1,4 +1,4 @@
-# Create Many Images with a Single Prompt
+# Create Multiple Images with a Single Prompt
 
 ChatGPT is good at creating imaages using DALL-E, but it only creates 1 or 2 at a time.
 This simple trick will let you create a batch of images with a single prompt
@@ -13,7 +13,7 @@ Loop 10 times
 ## Response
 I'm not going to include all 10 images here, but you should get the idea.
 
-![cat](./assets/cat.webp)
+![cat](assets/cat.webp)
 ```
 The first cat image has been successfully generated and saved.
 
@@ -27,7 +27,9 @@ The tenth and final cat image has been generated and saved,
 
 All ten images have now been successfully created and stored. If there's anything more you'd like to do with these images or any other assistance you need, please let me know!
 ```
+---
 
+# List Files
 ## Prompt
 verify that the files have been saved
 

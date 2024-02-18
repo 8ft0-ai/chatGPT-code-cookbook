@@ -1,6 +1,6 @@
 # Create a Video Slideshow with Transitions
 
-This builds on from [creating multiple images]('video%20islideshow.md') 
+This builds on from [creating multiple images](video%20slideshow.md) 
 
 
 
@@ -16,8 +16,8 @@ Adding transitions requires a higher frames per second. This can result in the v
 ```
 
 # Result
-<video width="640" height="480" controls>
-  <source src="./assets/video_slideshow_with_transitions.mp4" type="video/mp4">
+<video width="480" height="640" controls>
+  <source src="/image%20creation/assets/video_slideshow_with_transitions.mp4" type="video/mp4">
 Your browser does not support the video tag.
 </video>
 
