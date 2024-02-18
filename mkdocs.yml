@@ -2,3 +2,5 @@ site_name: ChatGPT Code Cookbook
 
 theme:
   name: material
+
+use_directory_urls: false
