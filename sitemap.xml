@@ -26,7 +26,12 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://8ft0-ai.github.io/chatGPT-code-cookbook/tricks/running_your-own_code/</loc>
+         <loc>https://8ft0-ai.github.io/chatGPT-code-cookbook/tricks/running_your_own_code/</loc>
+         <lastmod>2024-02-19</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://8ft0-ai.github.io/chatGPT-code-cookbook/tricks/updating_code/</loc>
          <lastmod>2024-02-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
