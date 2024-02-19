@@ -30,6 +30,7 @@ for number in numbers:
             even_numbers.append(number)
         else:
             odd_numbers.append(number)
+            
         
         # Check if the number is divisible by the specified divisor
         if number % divisor == 0:
