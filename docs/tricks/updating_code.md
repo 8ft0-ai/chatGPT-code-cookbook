@@ -3,7 +3,7 @@
 Yup, ChatGPT can update the code files that you have uploaded. eg
 
             
-See original [divisor.py](running_your_own_code.py)
+See original [divisor.py](running_your_own_code.md)
 
 ```
 update the code in divisor.py to be a function
@@ -11,9 +11,11 @@ update the code in divisor.py to be a function
 
 Updated file:
 
-*"I have updated the code in misc.py to define a function that categorizes numbers from a given list into even, odd, and those divisible by a specified divisor, while handling negative numbers and non-numeric values gracefully."*
+!!! quote "ChatGPT"
 
-```python
+    I have updated the code in misc.py to define a function that categorizes numbers from a given list into even, odd, and those divisible by a specified divisor, while handling negative numbers and non-numeric values gracefully.
+
+```python title="divisors.py"
 def categorize_numbers(numbers, divisor):
     # Initialize lists to store categorized numbers
     even_numbers = []

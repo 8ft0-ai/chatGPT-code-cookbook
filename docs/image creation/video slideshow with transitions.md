@@ -4,7 +4,7 @@ This builds on from [creating multiple images](video%20slideshow.md)
 
 
 
-# Adding Video Transitions
+## Adding Video Transitions
 
 Adding transitions requires a higher frames per second. This can result in the video creation taking longer than 60 seconds (this is the maximum time for a ChatGPT 'execution'). You'll need to experiment with fps settings and number of images in order to get the task to complete in under 60 seconds.
 
@@ -15,7 +15,7 @@ Adding transitions requires a higher frames per second. This can result in the v
 - use first 3 images only
 ```
 
-# Result
+### Result
 <video width="480" height="640" controls>
   <source src="/chatGPT-code-cookbook/image%20creation/assets/video_slideshow_with_transitions.mp4" type="video/mp4">
 Your browser does not support the video tag.
@@ -23,7 +23,7 @@ Your browser does not support the video tag.
 
 
 ---
-# Under the hood
+## Under the hood
 This is how ChatGPT handled the video slideshow creation
 
 

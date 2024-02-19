@@ -4,9 +4,7 @@ Upload a python file and have ChatGPT run it for you.
 
 eg 
 
-```python
-# divisors.py
-
+```python title="divisors.py"
 # Define a list of mixed data types including numbers and a string
 numbers = [10, 15, 22, -5, 30, 45, 60]
 
@@ -30,7 +28,7 @@ for number in numbers:
             even_numbers.append(number)
         else:
             odd_numbers.append(number)
-            
+
         
         # Check if the number is divisible by the specified divisor
         if number % divisor == 0:
@@ -50,8 +48,7 @@ print(f"Numbers divisible by {divisor}: {divisible_by_divisor}")
 show only the results, in json format, of executing this script: divisors.py 
 ```
 
-OUtput
-```json
+```json title="output"
 {
   "even_numbers": [10, 22, 30, 60],
   "odd_numbers": [15, 45],
