@@ -1,0 +1,1440 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://8ft0-ai.github.io/chatGPT-code-cookbook/internals/list_python_libraries/">
+      
+      
+        <link rel="prev" href="../../image%20creation/video%20slideshow/">
+      
+      
+        <link rel="next" href="../../tricks/running_your-own_code/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.9">
+    
+    
+      
+        <title>List the installed python libraries - ChatGPT Code Cookbook</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.f2e4d321.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#list-the-installed-python-libraries" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="ChatGPT Code Cookbook" class="md-header__button md-logo" aria-label="ChatGPT Code Cookbook" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            ChatGPT Code Cookbook
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              List the installed python libraries
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/8ft0-ai/chatGPT-code-cookbook/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="ChatGPT Code Cookbook" class="md-nav__button md-logo" aria-label="ChatGPT Code Cookbook" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    ChatGPT Code Cookbook
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/8ft0-ai/chatGPT-code-cookbook/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introduction
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Image creation
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Image creation
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../image%20creation/multiple%20images/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Create Multiple Images with a Single Prompt
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../image%20creation/video%20slideshow%20with%20transitions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Create a Video Slideshow with Transitions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../image%20creation/video%20slideshow/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Create a Video Slideshow
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Internals
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Internals
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    List the installed python libraries
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    List the installed python libraries
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#library-modules" class="md-nav__link">
+    <span class="md-ellipsis">
+      Library Modules
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#categorised-list" class="md-nav__link">
+    <span class="md-ellipsis">
+      Categorised List
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Categorised List">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#web-development" class="md-nav__link">
+    <span class="md-ellipsis">
+      Web Development
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#data-science-and-machine-learning" class="md-nav__link">
+    <span class="md-ellipsis">
+      Data Science and Machine Learning
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#natural-language-processing-and-image-processing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Natural Language Processing and Image Processing
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#networking-and-communication" class="md-nav__link">
+    <span class="md-ellipsis">
+      Networking and Communication
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#data-formats-and-serialization" class="md-nav__link">
+    <span class="md-ellipsis">
+      Data Formats and Serialization
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scientific-and-numeric-computing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Scientific and Numeric Computing
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#database-and-orm" class="md-nav__link">
+    <span class="md-ellipsis">
+      Database and ORM
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#file-and-data-manipulation" class="md-nav__link">
+    <span class="md-ellipsis">
+      File and Data Manipulation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#audio-and-speech-processing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Audio and Speech Processing
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#visualization-and-gui" class="md-nav__link">
+    <span class="md-ellipsis">
+      Visualization and GUI
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cryptography-and-security" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cryptography and Security
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#miscellaneous" class="md-nav__link">
+    <span class="md-ellipsis">
+      Miscellaneous
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#specific-utility-libraries" class="md-nav__link">
+    <span class="md-ellipsis">
+      Specific utility libraries
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#categorised-table" class="md-nav__link">
+    <span class="md-ellipsis">
+      Categorised Table
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Tricks
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Tricks
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tricks/running_your-own_code/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Running your own code
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#library-modules" class="md-nav__link">
+    <span class="md-ellipsis">
+      Library Modules
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#categorised-list" class="md-nav__link">
+    <span class="md-ellipsis">
+      Categorised List
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Categorised List">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#web-development" class="md-nav__link">
+    <span class="md-ellipsis">
+      Web Development
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#data-science-and-machine-learning" class="md-nav__link">
+    <span class="md-ellipsis">
+      Data Science and Machine Learning
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#natural-language-processing-and-image-processing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Natural Language Processing and Image Processing
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#networking-and-communication" class="md-nav__link">
+    <span class="md-ellipsis">
+      Networking and Communication
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#data-formats-and-serialization" class="md-nav__link">
+    <span class="md-ellipsis">
+      Data Formats and Serialization
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scientific-and-numeric-computing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Scientific and Numeric Computing
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#database-and-orm" class="md-nav__link">
+    <span class="md-ellipsis">
+      Database and ORM
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#file-and-data-manipulation" class="md-nav__link">
+    <span class="md-ellipsis">
+      File and Data Manipulation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#audio-and-speech-processing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Audio and Speech Processing
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#visualization-and-gui" class="md-nav__link">
+    <span class="md-ellipsis">
+      Visualization and GUI
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cryptography-and-security" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cryptography and Security
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#miscellaneous" class="md-nav__link">
+    <span class="md-ellipsis">
+      Miscellaneous
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#specific-utility-libraries" class="md-nav__link">
+    <span class="md-ellipsis">
+      Specific utility libraries
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#categorised-table" class="md-nav__link">
+    <span class="md-ellipsis">
+      Categorised Table
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+<h1 id="list-the-installed-python-libraries">List the installed python libraries</h1>
+<pre><code>pip freeze
+</code></pre>
+<h2 id="library-modules">Library Modules</h2>
+<p>(from STDOUT)</p>
+<pre><code>absl-py==2.0.0
+affine==2.4.0
+aiohttp==3.8.1
+aiosignal==1.3.1
+analytics-python==1.4.post1
+anyio==3.7.1
+anytree==2.8.0
+argcomplete==1.10.3
+argon2-cffi==23.1.0
+argon2-cffi-bindings==21.2.0
+arviz==0.15.1
+asn1crypto==1.5.1
+asttokens==2.4.1
+async-timeout==4.0.3
+attrs==23.1.0
+audioread==3.0.1
+Babel==2.14.0
+backcall==0.2.0
+backoff==1.10.0
+backports.zoneinfo==0.2.1
+basemap==1.3.2
+basemap-data==1.3.2
+bcrypt==4.1.2
+beautifulsoup4==4.8.2
+bleach==6.1.0
+blinker==1.7.0
+blis==0.7.11
+bokeh==2.4.0
+branca==0.7.0
+Brotli==1.1.0
+cachetools==5.3.2
+cairocffi==1.6.1
+CairoSVG==2.5.2
+camelot-py==0.10.1
+catalogue==2.0.10
+certifi==2019.11.28
+cffi==1.16.0
+chardet==4.0.0
+charset-normalizer==2.1.1
+click==8.1.7
+click-plugins==1.1.1
+cligj==0.7.2
+cloudpickle==3.0.0
+cmudict==1.0.16
+comm==0.2.0
+compressed-rtf==1.0.6
+countryinfo==0.1.2
+cryptography==3.4.8
+cssselect2==0.7.0
+cycler==0.12.1
+cymem==2.0.8
+Cython==0.29.36
+databricks-sql-connector==0.9.1
+dbus-python==1.2.16
+debugpy==1.8.0
+decorator==4.4.2
+defusedxml==0.7.1
+deprecat==2.1.1
+dill==0.3.7
+distro-info==0.23+ubuntu1.1
+dlib==19.22.1
+dnspython==2.4.2
+docx2txt==0.8
+ebcdic==1.1.1
+EbookLib==0.18
+einops==0.3.2
+email-validator==2.1.0.post1
+entrypoints==0.4
+et-xmlfile==1.1.0
+exceptiongroup==1.2.0
+exchange-calendars==3.4
+executing==2.0.1
+extract-msg==0.28.7
+Faker==8.13.2
+fastapi==0.95.2
+fastjsonschema==2.19.0
+fastprogress==1.0.3
+ffmpeg-python==0.2.0
+ffmpy==0.3.1
+filelock==3.13.1
+Fiona==1.8.20
+flask==3.0.0
+Flask-CacheBuster==1.0.0
+Flask-Cors==4.0.0
+Flask-Login==0.6.3
+folium==0.12.1
+fonttools==4.47.0
+fpdf==1.7.2
+frozenlist==1.4.1
+future==0.18.3
+fuzzywuzzy==0.18.0
+gensim==4.1.0
+geographiclib==1.52
+geopandas==0.10.2
+geopy==2.2.0
+gradio==2.2.15
+graphviz==0.17
+gTTS==2.2.3
+h11==0.14.0
+h2==4.1.0
+h5netcdf==1.1.0
+h5py==3.6.0
+hpack==4.0.0
+html5lib==1.1
+httpcore==1.0.2
+httptools==0.6.1
+httpx==0.25.2
+hypercorn==0.14.3
+hyperframe==6.0.1
+idna==2.8
+imageio==2.33.1
+imageio-ffmpeg==0.4.9
+IMAPClient==2.1.0
+imgkit==1.2.2
+importlib-metadata==7.0.0
+importlib-resources==6.1.1
+iniconfig==2.0.0
+ipykernel==6.27.1
+ipython==8.12.3
+ipython-genutils==0.2.0
+isodate==0.6.1
+itsdangerous==2.1.2
+jax==0.2.28
+jedi==0.19.1
+Jinja2==3.1.2
+joblib==1.3.2
+json5==0.9.14
+jsonpickle==3.0.2
+jsonschema==4.20.0
+jsonschema-specifications==2023.11.2
+jupyter-client==7.4.9
+jupyter-core==5.1.3
+jupyter-server==1.23.5
+jupyterlab==3.4.8
+jupyterlab-pygments==0.2.2
+jupyterlab-server==2.19.0
+keras==2.6.0
+kerykeion==2.1.16
+kiwisolver==1.4.5
+korean-lunar-calendar==0.3.1
+librosa==0.8.1
+llvmlite==0.41.1
+loguru==0.5.3
+lxml==4.9.3
+markdown2==2.4.12
+markdownify==0.9.3
+MarkupSafe==2.1.3
+matplotlib==3.4.3
+matplotlib-inline==0.1.6
+matplotlib-venn==0.11.6
+mistune==3.0.2
+mizani==0.9.3
+mne==0.23.4
+monotonic==1.6
+moviepy==1.0.3
+mpmath==1.3.0
+mtcnn==0.1.1
+multidict==6.0.4
+munch==4.0.0
+murmurhash==1.0.10
+mutagen==1.45.1
+nashpy==0.0.35
+nbclassic==0.4.5
+nbclient==0.9.0
+nbconvert==7.13.0
+nbformat==5.9.2
+nest-asyncio==1.5.8
+networkx==2.6.3
+nltk==3.6.3
+notebook==6.5.1
+notebook-shim==0.2.3
+numba==0.58.1
+numexpr==2.8.6
+numpy==1.21.2
+numpy-financial==1.0.0
+odfpy==1.4.1
+olefile==0.47
+opencv-python==4.5.2.54
+openpyxl==3.0.10
+opt-einsum==3.3.0
+orjson==3.9.10
+oscrypto==1.3.0
+packaging==23.2
+pandas==1.3.2
+pandocfilters==1.5.0
+paramiko==3.4.0
+parso==0.8.3
+pathy==0.10.3
+patsy==0.5.4
+pdf2image==1.16.3
+pdfkit==0.6.1
+pdfminer.six==20191110
+pdfplumber==0.5.28
+pdfrw==0.4
+pexpect==4.9.0
+pickleshare==0.7.5
+Pillow==8.3.2
+pkgutil-resolve-name==1.3.10
+platformdirs==4.1.0
+plotly==5.3.0
+plotnine==0.10.1
+pluggy==1.3.0
+pooch==1.8.0
+preshed==3.0.9
+priority==2.0.0
+proglog==0.1.10
+prometheus-client==0.19.0
+prompt-toolkit==3.0.43
+pronouncing==0.2.0
+psutil==5.9.7
+ptyprocess==0.7.0
+pure-eval==0.2.2
+py==1.11.0
+PyAudio==0.2.11
+pycountry==20.7.3
+pycparser==2.21
+pycryptodome==3.19.0
+pycryptodomex==3.19.0
+pydantic==1.10.2
+pydot==1.4.2
+pydub==0.25.1
+pydyf==0.8.0
+pygments==2.17.2
+PyGObject==3.36.0
+pygraphviz==1.7
+PyJWT==2.8.0
+pylog==1.1
+pyluach==2.2.0
+pymc3==3.11.5
+PyMuPDF==1.19.6
+PyNaCl==1.5.0
+pyOpenSSL==21.0.0
+pypandoc==1.6.3
+pyparsing==3.1.1
+PyPDF2==1.28.6
+pyphen==0.14.0
+pyproj==3.5.0
+pyprover==0.5.6
+pyshp==2.1.3
+pyswisseph==2.10.3.2
+pytesseract==0.3.8
+pytest==6.2.5
+pyth3==0.7
+python-apt==2.0.1+ubuntu0.20.4.1
+python-dateutil==2.8.2
+python-docx==0.8.11
+python-dotenv==1.0.0
+python-multipart==0.0.6
+python-pptx==0.6.21
+pyttsx3==2.90
+pytz==2023.3.post1
+PyWavelets==1.4.1
+pyxlsb==1.0.8
+PyYAML==6.0.1
+pyzbar==0.1.8
+pyzmq==25.1.2
+qrcode==7.3
+rarfile==4.0
+rasterio==1.2.10
+rdflib==6.0.0
+referencing==0.32.0
+regex==2023.10.3
+reportlab==3.6.1
+requests==2.31.0
+requests-unixsocket==0.2.0
+resampy==0.4.2
+rpds-py==0.15.2
+scikit-image==0.18.3
+scikit-learn==1.0
+scipy==1.7.1
+seaborn==0.11.2
+semver==3.0.2
+Send2Trash==1.8.2
+sentencepiece==0.1.99
+shap==0.39.0
+Shapely==1.7.1
+six==1.14.0
+slicer==0.0.7
+smart-open==6.4.0
+sniffio==1.3.0
+snowflake-connector-python==2.7.12
+snuggs==1.4.7
+sortedcontainers==2.4.0
+SoundFile==0.10.2
+soupsieve==2.5
+spacy==3.1.6
+spacy-legacy==3.0.12
+SpeechRecognition==3.8.1
+srsly==2.4.8
+stack-data==0.6.3
+starlette==0.27.0
+statsmodels==0.13.1
+svglib==1.1.0
+svgwrite==1.4.1
+sympy==1.8
+tables==3.6.1
+tabula==1.0.5
+tabulate==0.8.9
+tenacity==8.2.3
+terminado==0.18.0
+text-unidecode==1.3
+textblob==0.15.3
+textract==1.6.4
+Theano-PyMC==1.1.2
+thinc==8.0.17
+threadpoolctl==3.2.0
+thrift==0.16.0
+tifffile==2023.7.10
+tinycss2==1.2.1
+toml==0.10.2
+tomli==2.0.1
+toolz==0.12.0
+torch==1.10.0
+torchaudio==0.10.0
+torchtext==0.6.0
+torchvision==0.11.1
+tornado==6.4
+tqdm==4.64.0
+traitlets==5.14.0
+trimesh==3.9.29
+typer==0.4.2
+typing-extensions==4.5.0
+tzlocal==5.2
+ujson==5.9.0
+unattended-upgrades==0.1
+urllib3==1.25.8
+uvicorn==0.24.0.post1
+uvloop==0.19.0
+Wand==0.6.13
+wasabi==0.10.1
+watchfiles==0.21.0
+wcwidth==0.2.12
+weasyprint==53.3
+webencodings==0.5.1
+websocket-client==1.7.0
+websockets==10.3
+werkzeug==3.0.1
+wordcloud==1.8.1
+wrapt==1.16.0
+wsproto==1.2.0
+xarray==2023.1.0
+xarray-einstats==0.5.1
+xgboost==1.4.2
+xlrd==1.2.0
+XlsxWriter==3.1.9
+xml-python==0.4.3
+yarl==1.9.4
+zipp==3.17.0
+zopfli==0.2.3
+</code></pre>
+<h2 id="categorised-list">Categorised List</h2>
+<pre><code>categorise the list based on functionality
+</code></pre>
+<p>The list of installed Python libraries can be categorized based on their primary functionality into several groups. Here is a broad classification:</p>
+<h3 id="web-development">Web Development</h3>
+<ul>
+<li><strong>Flask</strong>, <strong>Django</strong>, <strong>FastAPI</strong>: Web frameworks for building web applications.</li>
+<li><strong>Uvicorn</strong>, <strong>Hypercorn</strong>: ASGI servers for running async web applications.</li>
+<li><strong>aiohttp</strong>, <strong>httpx</strong>: Asynchronous HTTP client/server framework.</li>
+</ul>
+<h3 id="data-science-and-machine-learning">Data Science and Machine Learning</h3>
+<ul>
+<li><strong>NumPy</strong>, <strong>Pandas</strong>: Data manipulation and analysis.</li>
+<li><strong>SciPy</strong>: Scientific computing.</li>
+<li><strong>Matplotlib</strong>, <strong>Seaborn</strong>, <strong>Plotly</strong>: Data visualization.</li>
+<li><strong>Scikit-learn</strong>: Machine learning.</li>
+<li><strong>TensorFlow</strong>, <strong>Keras</strong>, <strong>PyTorch</strong>: Deep learning frameworks.</li>
+<li><strong>XGBoost</strong>: Gradient boosting framework.</li>
+<li><strong>Statsmodels</strong>: Statistical modeling and econometrics.</li>
+</ul>
+<h3 id="natural-language-processing-and-image-processing">Natural Language Processing and Image Processing</h3>
+<ul>
+<li><strong>Spacy</strong>, <strong>NLTK</strong>, <strong>TextBlob</strong>: Natural language processing.</li>
+<li><strong>OpenCV-Python</strong>, <strong>Pillow</strong>, <strong>imageio</strong>: Image processing.</li>
+</ul>
+<h3 id="networking-and-communication">Networking and Communication</h3>
+<ul>
+<li><strong>Requests</strong>, <strong>urllib3</strong>: HTTP libraries for sending requests.</li>
+<li><strong>Paramiko</strong>, <strong>cryptography</strong>: Libraries for secure connections and cryptography.</li>
+</ul>
+<h3 id="data-formats-and-serialization">Data Formats and Serialization</h3>
+<ul>
+<li><strong>BeautifulSoup4</strong>, <strong>lxml</strong>: HTML and XML parsing.</li>
+<li><strong>PyYAML</strong>, <strong>json5</strong>: YAML and JSON parsing and serialization.</li>
+</ul>
+<h3 id="scientific-and-numeric-computing">Scientific and Numeric Computing</h3>
+<ul>
+<li><strong>SymPy</strong>: Symbolic mathematics.</li>
+<li><strong>Jupyter Notebook</strong>, <strong>IPython</strong>: Interactive computing and development environment.</li>
+</ul>
+<h3 id="database-and-orm">Database and ORM</h3>
+<ul>
+<li><strong>SQLAlchemy</strong>, <strong>Django ORM</strong>: Object-relational mapping libraries.</li>
+<li><strong>SQLite</strong>, <strong>PostgreSQL</strong>: Database connectors and wrappers.</li>
+</ul>
+<h3 id="file-and-data-manipulation">File and Data Manipulation</h3>
+<ul>
+<li><strong>Pandas</strong>, <strong>OpenPyXL</strong>, <strong>xlrd</strong>, <strong>XlsxWriter</strong>: Reading and writing Excel files.</li>
+<li><strong>pdfminer.six</strong>, <strong>PyPDF2</strong>: PDF parsing and manipulation.</li>
+</ul>
+<h3 id="audio-and-speech-processing">Audio and Speech Processing</h3>
+<ul>
+<li><strong>LibROSA</strong>, <strong>PyDub</strong>, <strong>SpeechRecognition</strong>: Libraries for audio analysis and speech recognition.</li>
+</ul>
+<h3 id="visualization-and-gui">Visualization and GUI</h3>
+<ul>
+<li><strong>Bokeh</strong>, <strong>Dash</strong>: Interactive visualization and dashboard building tools.</li>
+</ul>
+<h3 id="cryptography-and-security">Cryptography and Security</h3>
+<ul>
+<li><strong>Cryptography</strong>, <strong>PyNaCl</strong>: Cryptography libraries for secure data encryption.</li>
+</ul>
+<h3 id="miscellaneous">Miscellaneous</h3>
+<ul>
+<li><strong>Docker</strong>, <strong>GitPython</strong>: Libraries for Docker and Git operations.</li>
+<li><strong>RQ (Redis Queue)</strong>, <strong>Celery</strong>: Asynchronous task queues.</li>
+</ul>
+<p>This classification is not exhaustive and some libraries may fit into multiple categories. Also, the list may contain specific utility libraries (like <strong>Wand</strong> for MagickWand API or <strong>Faker</strong> for generating fake data) that serve niche purposes.</p>
+<p>Here's a table listing specific utility libraries from the provided list along with a brief description of each:</p>
+<h3 id="specific-utility-libraries">Specific utility libraries</h3>
+<p>Here's the table reordered alphabetically by the library names along with their descriptions:</p>
+<table>
+<thead>
+<tr>
+<th>Library</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>camelot-py</strong></td>
+<td>A Python library that makes it easy to extract tables from PDFs.</td>
+</tr>
+<tr>
+<td><strong>EbookLib</strong></td>
+<td>A library for reading, writing, and converting ebooks in EPUB2/EPUB3 format.</td>
+</tr>
+<tr>
+<td><strong>ffmpeg-python</strong></td>
+<td>A comprehensive library to access FFmpeg functionalities from Python.</td>
+</tr>
+<tr>
+<td><strong>Faker</strong></td>
+<td>A Python package that generates fake data for various purposes, such as testing and filling databases with dummy data.</td>
+</tr>
+<tr>
+<td><strong>gTTS</strong></td>
+<td>A Python library and CLI tool to interface with Google Translate's text-to-speech API.</td>
+</tr>
+<tr>
+<td><strong>imgkit</strong></td>
+<td>A Python wrapper for converting HTML to an image, PDF, or various image formats using WebKit.</td>
+</tr>
+<tr>
+<td><strong>MoviePy</strong></td>
+<td>A library for video editing that can be used for basic operations (like cuts, concatenations, title insertions), video compositing, or to create advanced effects.</td>
+</tr>
+<tr>
+<td><strong>pdfminer.six</strong></td>
+<td>A tool for extracting information from PDF documents.</td>
+</tr>
+<tr>
+<td><strong>PyAudio</strong></td>
+<td>A set of Python bindings for PortAudio, a cross-platform audio I/O library.</td>
+</tr>
+<tr>
+<td><strong>PyMuPDF</strong></td>
+<td>A Python binding for MuPDF - a lightweight PDF and XPS viewer.</td>
+</tr>
+<tr>
+<td><strong>PyPDF2</strong></td>
+<td>A library capable of splitting, merging together, cropping, and transforming the pages of PDF files.</td>
+</tr>
+<tr>
+<td><strong>python-docx</strong></td>
+<td>A Python library for creating and updating Microsoft Word (.docx) files.</td>
+</tr>
+<tr>
+<td><strong>python-dotenv</strong></td>
+<td>A Python library that reads key-value pairs from a .env file and sets them as environment variables.</td>
+</tr>
+<tr>
+<td><strong>python-pptx</strong></td>
+<td>A library for creating and updating PowerPoint (.pptx) files.</td>
+</tr>
+<tr>
+<td><strong>pytesseract</strong></td>
+<td>A Python wrapper for Google's Tesseract-OCR Engine.</td>
+</tr>
+<tr>
+<td><strong>SpeechRecognition</strong></td>
+<td>A library for performing speech recognition, with support for several engines and APIs, online and offline.</td>
+</tr>
+<tr>
+<td><strong>tabula</strong></td>
+<td>A Python wrapper for Tabula, a tool to extract tables from PDFs into DataFrame or JSON.</td>
+</tr>
+<tr>
+<td><strong>textextract</strong></td>
+<td>A tool for extracting text from various document formats, encapsulating libraries like pdfminer for PDFs, pytesseract for images, etc.</td>
+</tr>
+<tr>
+<td><strong>Wand</strong></td>
+<td>A ctypes-based simple ImageMagick binding for Python, used for image manipulation tasks.</td>
+</tr>
+</tbody>
+</table>
+<p>This list provides a quick reference to specific utility libraries and their purposes, facilitating easier identification and use for specific tasks or projects.</p>
+<h2 id="categorised-table">Categorised Table</h2>
+<p>The full list is too long to process in a single code-execution (max 60 seconds). So we'll split the list and process each part before merging the results back into a single table.</p>
+<pre><code>User
+1. create a script to list all installed python libraries and save to a file called pip.all
+2. split pip.all into files max length 25 lines
+3. list files
+</code></pre>
+<p>The script successfully listed all installed Python libraries and saved them to a file named pip.all. It then split pip.all into multiple files, each with a maximum length of 25 lines. </p>
+<p>Now process min-batches one at a time</p>
+<pre><code>part = 2
+with file = '/mnt/data/pip.all.part[part]'
+  - read and list the contents of [file]
+  - create a script to:
+    - create a markdown table with library name, category column and a description column
+    - for each library, categorise the library and create a description of that library
+    - do not use any placeholders
+    - do not simulate anything
+    - do not add any other libraries
+    - save the table to [file].md
+</code></pre>
+<p>Then merge</p>
+<pre><code>1. merge the files /mnt/data/pip.all.part[part to create a single, case insensitive, alphabetically sorted table.
+2. save table to libraries.md
+</code></pre>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.8fd75fb4.min.js"></script>
+      
+    
+  </body>
+</html>
