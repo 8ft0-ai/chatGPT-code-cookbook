@@ -9,11 +9,7 @@ print index[mouse]
 
 ## Result
 
-> In the given context, animals is a list with three elements: cat, dog, and mouse. Lists in Python are zero-indexed, meaning the first element is at index 0, the second element is at index 1, and so on.
->
-> For print animals[2], this would access the third element in the list, which is mouse.
->
-> For the second part, primt index[mouse], it seems like there's a typo. Assuming the intent was to find the index of mouse in the list, the correct syntax in Python would be animals.index('mouse'), which would return the index of mouse in the list. Given the list animals = ['cat', 'dog', 'mouse'], mouse is at index 2.
+> In Python, to access the third element in a list called animals containing the elements cat, dog, and mouse, you would use animals[2], as list indices start at 0. To find the index of mouse in the list, you would use the .index() method, like animals.index('mouse'). Given the context, the third element is mouse, and the index of mouse in the list is 2
 
 
 ## Python executed
