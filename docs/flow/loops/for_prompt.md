@@ -73,3 +73,10 @@ zip_path
 
 
 ```
+
+## Notes
+
+I asked ChatGPT to suggest a better initial prompt. It came back with a very verbose ....
+
+
+> Write poems from the perspectives of a cat, a dog, and a mouse, highlighting their unique viewpoints and experiences. Each poem should encapsulate the essence of its subject's world, their joys, challenges, and the beauty they find in their existence. Save each poem in a separate text file named according to the subject (e.g., poem-cat.txt, poem-dog.txt, poem-mouse.txt). After writing all three poems, compress these files into a single ZIP archive for easy download. Ensure the process is streamlined and the poems reflect a deep understanding and imaginative insight into the lives of these animals.
