@@ -2,37 +2,72 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://8ft0-ai.github.io/chatGPT-code-cookbook/</loc>
-         <lastmod>2024-02-19</lastmod>
+         <lastmod>2024-02-21</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://8ft0-ai.github.io/chatGPT-code-cookbook/control/if/if_in_loop/</loc>
+         <lastmod>2024-02-21</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://8ft0-ai.github.io/chatGPT-code-cookbook/data%20structures/lists/simple_list/</loc>
+         <lastmod>2024-02-21</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://8ft0-ai.github.io/chatGPT-code-cookbook/flow/chains/linear_chain/</loc>
+         <lastmod>2024-02-21</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://8ft0-ai.github.io/chatGPT-code-cookbook/flow/loops/for_nested/</loc>
+         <lastmod>2024-02-21</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://8ft0-ai.github.io/chatGPT-code-cookbook/flow/loops/for_numbers/</loc>
+         <lastmod>2024-02-21</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://8ft0-ai.github.io/chatGPT-code-cookbook/flow/loops/for_prompt/</loc>
+         <lastmod>2024-02-21</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://8ft0-ai.github.io/chatGPT-code-cookbook/flow/loops/for_range/</loc>
+         <lastmod>2024-02-21</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://8ft0-ai.github.io/chatGPT-code-cookbook/image%20creation/multiple%20images/</loc>
-         <lastmod>2024-02-19</lastmod>
+         <lastmod>2024-02-21</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://8ft0-ai.github.io/chatGPT-code-cookbook/image%20creation/video%20slideshow%20with%20transitions/</loc>
-         <lastmod>2024-02-19</lastmod>
+         <lastmod>2024-02-21</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://8ft0-ai.github.io/chatGPT-code-cookbook/image%20creation/video%20slideshow/</loc>
-         <lastmod>2024-02-19</lastmod>
+         <lastmod>2024-02-21</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://8ft0-ai.github.io/chatGPT-code-cookbook/internals/list_python_libraries/</loc>
-         <lastmod>2024-02-19</lastmod>
+         <lastmod>2024-02-21</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://8ft0-ai.github.io/chatGPT-code-cookbook/tricks/running_your_own_code/</loc>
-         <lastmod>2024-02-19</lastmod>
+         <lastmod>2024-02-21</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://8ft0-ai.github.io/chatGPT-code-cookbook/tricks/updating_code/</loc>
-         <lastmod>2024-02-19</lastmod>
+         <lastmod>2024-02-21</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>
